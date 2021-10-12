@@ -1,0 +1,17 @@
+ function raschitstoim(){
+    let re = /^\d+$/;
+    let price = document.getElementById("price");
+    let quantity = document.getElementById("quantity");
+    let k = document.getElementById("result");
+    if(re.test(price.value) && re.test(quantity.value)){
+        alert(k.innerHTML = "Стоимость заказа: " + parseFloat(price.value) * parseFloat(quantity.value) + " руб.");
+    } else{
+        alert(k.innerHTML = "Введите корректные данные");
+    }
+    return false;
+  }
+
+  window.addEventListener('DOMContentLoaded', function (_event) {
+    console.log("DOM fully loaded and parsed");
+    document.getElementById("my-button").addEventListener("click", raschitstoim);
+  });
